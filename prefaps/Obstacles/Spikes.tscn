@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1rmh6u2hp7vs"]
+
+[ext_resource type="Texture2D" uid="uid://b4ipd3wrbx5gs" path="res://sprites/environment/Game_Jam_Stacheln.png" id="2_rqi3g"]
+[ext_resource type="PackedScene" uid="uid://bvyyl8yb5jtr1" path="res://prefaps/killzone.tscn" id="3_0r2p5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w37o0"]
+size = Vector2(20, 16.219486)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q35k7"]
+size = Vector2(1094, 66)
+
+[node name="Spikes" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 2
+z_as_relative = false
+texture = ExtResource("2_rqi3g")
+
+[node name="Killzone" parent="." instance=ExtResource("3_0r2p5")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0, -15.500171)
+scale = Vector2(48.32, 8.200034)
+shape = SubResource("RectangleShape2D_w37o0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3, 29)
+shape = SubResource("RectangleShape2D_q35k7")

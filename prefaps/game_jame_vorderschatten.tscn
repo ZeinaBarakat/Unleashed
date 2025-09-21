@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct0sgdjx0nm1g"]
+
+[ext_resource type="Texture2D" uid="uid://bgq40wanbmnmf" path="res://sprites/Background/Game_Jame_Vorderschatten.png" id="1_n5n5a"]
+
+[node name="GameJameVorderschatten" type="Sprite2D"]
+z_index = 50
+z_as_relative = false
+texture = ExtResource("1_n5n5a")

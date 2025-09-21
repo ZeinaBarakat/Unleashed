@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxm0dxf4ajutt"]
+
+[ext_resource type="PackedScene" uid="uid://bb2o26l1l4w2q" path="res://prefaps/Environment/ground.tscn" id="2_p0yqt"]
+[ext_resource type="PackedScene" uid="uid://c3qsyijloafto" path="res://Scenes/player.tscn" id="2_yapb5"]
+[ext_resource type="PackedScene" uid="uid://dr7d67r6drwlw" path="res://prefaps/Environment/rotating_platform.tscn" id="3_jigyn"]
+[ext_resource type="PackedScene" uid="uid://xmtsr7yc44qv" path="res://prefaps/Obstacles/smallDawg.tscn" id="4_uhrws"]
+[ext_resource type="PackedScene" uid="uid://b1rmh6u2hp7vs" path="res://prefaps/Obstacles/spikes.tscn" id="5_vc03g"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yapb5"]
+distance = -41.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(6, 243)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_yapb5")
+
+[node name="player" parent="." instance=ExtResource("2_yapb5")]
+position = Vector2(-2, -194)
+
+[node name="Ground" parent="." instance=ExtResource("2_p0yqt")]
+position = Vector2(-147, 288)
+
+[node name="RotatingPlatform" parent="." instance=ExtResource("3_jigyn")]
+position = Vector2(-272, 54)
+
+[node name="DawgEnemy" parent="." instance=ExtResource("4_uhrws")]
+position = Vector2(-888, 28)
+
+[node name="Spikes" parent="." instance=ExtResource("5_vc03g")]
+position = Vector2(1046, 237)

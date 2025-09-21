@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bagjg51kclmbl"]
+
+[ext_resource type="PackedScene" uid="uid://c3qsyijloafto" path="res://Scenes/player.tscn" id="1_oswx4"]
+[ext_resource type="PackedScene" uid="uid://bvyyl8yb5jtr1" path="res://prefaps/killzone.tscn" id="2_ranej"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0t0ce"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_oswx4")]
+position = Vector2(-2747, -224)
+
+[node name="WorldBorder" parent="." instance=ExtResource("2_ranej")]
+position = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorder"]
+shape = SubResource("WorldBoundaryShape2D_0t0ce")

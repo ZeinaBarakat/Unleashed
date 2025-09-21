@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4lre3g0kau28"]
+
+[ext_resource type="Texture2D" uid="uid://xqqf1160l0c0" path="res://sprites/environment/Game_Jam_Boden2.png" id="1_6bkhn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcr54"]
+size = Vector2(265, 62)
+
+[node name="OneWayPlatform" type="StaticBody2D"]
+
+[node name="GameJamBoden2" type="Sprite2D" parent="."]
+texture = ExtResource("1_6bkhn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, 12)
+shape = SubResource("RectangleShape2D_fcr54")
+one_way_collision = true

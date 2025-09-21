@@ -1,0 +1,73 @@
+[gd_scene load_steps=12 format=3 uid="uid://dcrkjye8860x7"]
+
+[ext_resource type="Script" uid="uid://cnp84kr2ne2ja" path="res://scripts/DawgEnemy.cs" id="1_1748c"]
+[ext_resource type="Texture2D" uid="uid://bmt4dhftqnyn4" path="res://sprites/dawg/Giga_Hund_Geht_0000.png" id="3_8njaw"]
+[ext_resource type="Texture2D" uid="uid://dr0odk1oxena8" path="res://sprites/dawg/Giga_Hund_Geht_0001.png" id="4_dgk3q"]
+[ext_resource type="Texture2D" uid="uid://upa6j7qb8yfd" path="res://sprites/dawg/Giga_Hund_Geht_0002.png" id="5_7rex1"]
+[ext_resource type="Texture2D" uid="uid://ch58h7i6d37sc" path="res://sprites/dawg/Giga_Hund_Geht_0003.png" id="6_tef3o"]
+[ext_resource type="Texture2D" uid="uid://hc5i6p6w0s8k" path="res://sprites/dawg/Giga_Hund_Geht_0004.png" id="7_05ijr"]
+[ext_resource type="PackedScene" uid="uid://bvyyl8yb5jtr1" path="res://prefaps/killzone.tscn" id="8_7qcbx"]
+[ext_resource type="Texture2D" uid="uid://cxtddtcctd7v8" path="res://sprites/dawg/Giga_Hund_Idle.png" id="8_18f84"]
+[ext_resource type="AudioStream" uid="uid://dmwcmr4l43nti" path="res://Sounds/closeToDogmp3.mp3" id="9_06xg5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dgk3q"]
+radius = 10.766018
+height = 35.778824
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6a54h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8njaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dgk3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7rex1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tef3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_05ijr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_18f84")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[node name="enemy" type="CharacterBody2D" node_paths=PackedStringArray("animatedSprite")]
+motion_mode = 1
+script = ExtResource("1_1748c")
+animatedSprite = NodePath("AnimatedSprite2Ddawg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0.5000057, 12)
+scale = Vector2(14.443596, 11.459292)
+shape = SubResource("CapsuleShape2D_dgk3q")
+
+[node name="AnimatedSprite2Ddawg" type="AnimatedSprite2D" parent="."]
+z_index = 10
+z_as_relative = false
+sprite_frames = SubResource("SpriteFrames_6a54h")
+animation = &"run"
+flip_h = true
+
+[node name="dawg" type="Node2D" parent="."]
+
+[node name="Killzone" parent="." instance=ExtResource("8_7qcbx")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0.5000057, 12)
+scale = Vector2(14.443596, 11.459292)
+shape = SubResource("CapsuleShape2D_dgk3q")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_06xg5")
+autoplay = true
+parameters/looping = false

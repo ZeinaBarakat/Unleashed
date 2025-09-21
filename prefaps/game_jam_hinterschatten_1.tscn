@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg7jowgqe70yf"]
+
+[ext_resource type="Texture2D" uid="uid://luv3ck8ypnfh" path="res://sprites/Background/Game_Jam_Hinterschatten_1.png" id="1_srhsf"]
+
+[node name="GameJamHinterschatten1" type="Sprite2D"]
+z_index = -10
+z_as_relative = false
+texture = ExtResource("1_srhsf")

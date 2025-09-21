@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://dcbxc2ue0obqh"]
+
+[ext_resource type="PackedScene" uid="uid://c3qsyijloafto" path="res://scenes/player.tscn" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dcrkjye8860x7" path="res://scenes/dawgEnemy.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://bb2o26l1l4w2q" path="res://prefaps/Environment/ground.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://bvyyl8yb5jtr1" path="res://prefaps/killzone.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://b1rmh6u2hp7vs" path="res://prefaps/Obstacles/Spikes.tscn" id="5_iywne"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iywne"]
+
+[node name="Game" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_yqjtg")]
+position = Vector2(540, 66)
+
+[node name="Camera2D2" type="Camera2D" parent="player"]
+position = Vector2(23, 49)
+
+[node name="dawgEnemy" parent="." instance=ExtResource("2_lnu2h")]
+position = Vector2(-146, 2)
+
+[node name="Ground2" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(163, 369)
+
+[node name="Ground" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(1516, 373)
+
+[node name="Ground3" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(3257, 373)
+
+[node name="Killzone" parent="." instance=ExtResource("4_lbhrr")]
+position = Vector2(252, 1110)
+scale = Vector2(41.999996, 8.560003)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("WorldBoundaryShape2D_iywne")
+
+[node name="Spikes" parent="." instance=ExtResource("5_iywne")]
+position = Vector2(1631, 162)

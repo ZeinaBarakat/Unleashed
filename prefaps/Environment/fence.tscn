@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://55d4r5vxjotq"]
+
+[ext_resource type="Texture2D" uid="uid://cjiwqm6i6sv2x" path="res://sprites/environment/Hilfsanimation_Game_Jam.png" id="1_w8s1e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76e8u"]
+size = Vector2(125, 97)
+
+[node name="Fence" type="StaticBody2D"]
+
+[node name="HilfsanimationGameJam" type="Sprite2D" parent="."]
+z_index = 2
+z_as_relative = false
+texture = ExtResource("1_w8s1e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_76e8u")

@@ -1,0 +1,144 @@
+[gd_scene load_steps=14 format=3 uid="uid://dw67wbvykpigy"]
+
+[ext_resource type="Script" uid="uid://cgla8wyhk7pxa" path="res://Scripts/Level.cs" id="1_c7ykl"]
+[ext_resource type="PackedScene" uid="uid://c3qsyijloafto" path="res://Scenes/player.tscn" id="2_ki8yu"]
+[ext_resource type="PackedScene" uid="uid://ci7fshhkrx1nm" path="res://prefaps/parallax.tscn" id="3_oh3hp"]
+[ext_resource type="PackedScene" uid="uid://bvyyl8yb5jtr1" path="res://prefaps/killzone.tscn" id="4_kbxyx"]
+[ext_resource type="PackedScene" uid="uid://bb2o26l1l4w2q" path="res://prefaps/Environment/ground.tscn" id="5_l1dil"]
+[ext_resource type="PackedScene" uid="uid://dr7d67r6drwlw" path="res://prefaps/Environment/rotating_platform.tscn" id="6_wjxdm"]
+[ext_resource type="PackedScene" uid="uid://bgamxqhb7r064" path="res://prefaps/Environment/wall.tscn" id="7_2oinh"]
+[ext_resource type="PackedScene" uid="uid://b6xl0hqpubwyv" path="res://prefaps/Obstacles/spike_ball.tscn" id="8_8yufk"]
+[ext_resource type="PackedScene" uid="uid://drlgg3665bbnj" path="res://prefaps/Obstacles/launch_pad.tscn" id="9_v3o3d"]
+[ext_resource type="PackedScene" uid="uid://xmtsr7yc44qv" path="res://prefaps/Obstacles/smallDawg.tscn" id="10_81nkk"]
+[ext_resource type="PackedScene" uid="uid://dcrkjye8860x7" path="res://Scenes/dawgEnemy.tscn" id="11_ki8yu"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0t0ce"]
+
+[sub_resource type="Curve2D" id="Curve2D_c7ykl"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -3359, -263, 0, 0, 0, 0, -2250, -251, 0, 0, 0, 0, -1900, -596, 0, 0, 0, 0, -1795, -218, 0, 0, 0, 0, -1428, -985, 0, 0, 0, 0, -954, -273, 0, 0, 0, 0, -629, -600, 0, 0, 0, 0, -301, -228, 0, 0, 0, 0, -14, -211, 0, 0, 0, 0, 203, -608, 0, 0, 0, 0, 549, -256, 0, 0, 0, 0, 1651, -254, 0, 0, 0, 0, 1697, -1008, 0, 0, 0, 0, 2198, -583, 0, 0, 0, 0, 2738, -887, 0, 0, 0, 0, 3011, -712, 0, 0, 0, 0, 3300, -1004, 0, 0, 0, 0, 3600, -993, 0, 0, 0, 0, 3706, -670, 0, 0, 0, 0, 4250, -1210, 0, 0, 0, 0, 5191, -1293, 0, 0, 0, 0, 6311, -1197, 0, 0, 0, 0, 6641, -699, 0, 0, 0, 0, 8703, -698)
+}
+point_count = 24
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("timerLabel")]
+script = ExtResource("1_c7ykl")
+timerLabel = NodePath("Control/VBoxContainer/Label")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control/VBoxContainer"]
+z_index = 999
+layout_mode = 2
+text = "this should be the timer "
+
+[node name="player" parent="." instance=ExtResource("2_ki8yu")]
+position = Vector2(-2747, -224)
+
+[node name="Parallax" parent="." instance=ExtResource("3_oh3hp")]
+position = Vector2(6673.368, -652.9108)
+
+[node name="WorldBorder" parent="." instance=ExtResource("4_kbxyx")]
+position = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorder"]
+shape = SubResource("WorldBoundaryShape2D_0t0ce")
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="Ground" parent="Environment" instance=ExtResource("5_l1dil")]
+position = Vector2(-2800, 0)
+
+[node name="Ground2" parent="Environment" instance=ExtResource("5_l1dil")]
+position = Vector2(-1461, 0)
+
+[node name="Ground3" parent="Environment" instance=ExtResource("5_l1dil")]
+position = Vector2(1087, 0)
+
+[node name="RotatingPlatform" parent="Environment" instance=ExtResource("6_wjxdm")]
+position = Vector2(-413, -3)
+
+[node name="Ground4" parent="Environment" instance=ExtResource("5_l1dil")]
+position = Vector2(2677, -1333)
+
+[node name="Wall" parent="Environment" instance=ExtResource("7_2oinh")]
+position = Vector2(-3465, -263)
+
+[node name="SpikeBall" parent="Environment" instance=ExtResource("8_8yufk")]
+position = Vector2(4226, -616)
+
+[node name="SpikeBall2" parent="Environment" instance=ExtResource("8_8yufk")]
+position = Vector2(4780, -878)
+
+[node name="SpikeBall3" parent="Environment" instance=ExtResource("8_8yufk")]
+position = Vector2(5426, -620)
+
+[node name="SpikeBall4" parent="Environment" instance=ExtResource("8_8yufk")]
+position = Vector2(6072, -886)
+
+[node name="RotatingPlatform2" parent="Environment" instance=ExtResource("6_wjxdm")]
+position = Vector2(2731, -483)
+
+[node name="Ground5" parent="Environment" instance=ExtResource("5_l1dil")]
+position = Vector2(4225, -433)
+
+[node name="Ground6" parent="Environment" instance=ExtResource("5_l1dil")]
+position = Vector2(5563, -433)
+
+[node name="Ground7" parent="Environment" instance=ExtResource("5_l1dil")]
+position = Vector2(6904, -433)
+
+[node name="Ground8" parent="Environment" instance=ExtResource("5_l1dil")]
+position = Vector2(8242, -433)
+
+[node name="LaunchPad" parent="Environment" instance=ExtResource("9_v3o3d")]
+position = Vector2(1695, -276)
+
+[node name="LaunchPad2" parent="Environment" instance=ExtResource("9_v3o3d")]
+position = Vector2(2206, -514)
+
+[node name="DawgEnemy" parent="." instance=ExtResource("10_81nkk")]
+position = Vector2(1113, -188)
+lowerLimitX = -650.0
+upperLimitX = 600.0
+
+[node name="DawgEnemy2" parent="." instance=ExtResource("10_81nkk")]
+position = Vector2(6071, -635)
+
+[node name="DawgEnemy3" parent="." instance=ExtResource("10_81nkk")]
+position = Vector2(6944, -635)
+lowerLimitX = -700.0
+upperLimitX = 700.0
+
+[node name="DawgEnemy4" parent="." instance=ExtResource("10_81nkk")]
+position = Vector2(7749, -635)
+lowerLimitX = -1000.0
+upperLimitX = 1000.0
+
+[node name="LaunchPad" parent="." instance=ExtResource("9_v3o3d")]
+position = Vector2(8803, -746)
+launchVelocity = -2000.0
+
+[node name="LaunchPad2" parent="." instance=ExtResource("9_v3o3d")]
+position = Vector2(8817, -1167)
+launchVelocity = -2000.0
+
+[node name="LaunchPad3" parent="." instance=ExtResource("9_v3o3d")]
+position = Vector2(8803, -1606)
+launchVelocity = -2000.0
+
+[node name="enemy" parent="." node_paths=PackedStringArray("path", "player") instance=ExtResource("11_ki8yu")]
+position = Vector2(-1090, -473)
+path = NodePath("../Path2D")
+player = NodePath("../player")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_c7ykl")

@@ -1,0 +1,148 @@
+[gd_scene load_steps=28 format=3 uid="uid://ckxm2sa4nf3d4"]
+
+[ext_resource type="Script" uid="uid://cgla8wyhk7pxa" path="res://scripts/Level.cs" id="1_njk2c"]
+[ext_resource type="Texture2D" uid="uid://bfmon07445gt6" path="res://sprites/game over/Giga_Dog_Bildsequenz_0000.png" id="2_025ou"]
+[ext_resource type="FontFile" uid="uid://cqkj18fpc54lx" path="res://fonts/KiriFont.ttf" id="2_w2eyy"]
+[ext_resource type="Texture2D" uid="uid://b0a01l68gyqil" path="res://sprites/game over/Giga_Dog_Bildsequenz_0001.png" id="3_b4a52"]
+[ext_resource type="Script" uid="uid://khm6i4i0c0xr" path="res://scripts/GameOverMenu.cs" id="3_lu5ed"]
+[ext_resource type="Texture2D" uid="uid://x8ql211621k1" path="res://sprites/game over/Giga_Dog_Bildsequenz_0002.png" id="4_l27ui"]
+[ext_resource type="Texture2D" uid="uid://bbjqnaimsg6i8" path="res://sprites/game over/Giga_Dog_Bildsequenz_0003.png" id="5_en3v4"]
+[ext_resource type="Texture2D" uid="uid://cdo357r8hq4e0" path="res://sprites/game over/Giga_Dog_Bildsequenz_0004.png" id="6_0l8sd"]
+[ext_resource type="Texture2D" uid="uid://bl103mfir11yo" path="res://sprites/game over/Giga_Dog_Bildsequenz_0006.png" id="7_d8l0x"]
+[ext_resource type="Texture2D" uid="uid://ms66ou1tooqc" path="res://sprites/game over/Giga_Dog_Bildsequenz_0007.png" id="8_6vrmr"]
+[ext_resource type="Texture2D" uid="uid://b7j77515sjyah" path="res://sprites/game over/Giga_Dog_Bildsequenz_0008.png" id="9_xyi6n"]
+[ext_resource type="Texture2D" uid="uid://bslytbtaeao50" path="res://sprites/game over/Giga_Dog_Bildsequenz_0009.png" id="10_tlkcd"]
+[ext_resource type="Texture2D" uid="uid://cw8ak30uranr2" path="res://sprites/game over/Giga_Dog_Bildsequenz_0010.png" id="11_2mq8j"]
+[ext_resource type="Texture2D" uid="uid://dbtox2c5ykifn" path="res://sprites/game over/Giga_Dog_Bildsequenz_0011.png" id="12_mmot0"]
+[ext_resource type="Texture2D" uid="uid://2f0lvkh8k4k1" path="res://sprites/game over/Giga_Dog_Bildsequenz_0012.png" id="13_feukn"]
+[ext_resource type="Texture2D" uid="uid://bfm88ngrdcgop" path="res://sprites/game over/Giga_Dog_Bildsequenz_0013.png" id="14_0o4ek"]
+[ext_resource type="Texture2D" uid="uid://dqb1w3v81ve05" path="res://sprites/game over/Giga_Dog_Bildsequenz_0014.png" id="15_s0r8n"]
+[ext_resource type="Texture2D" uid="uid://uxx647l1ies5" path="res://sprites/game over/Giga_Dog_Bildsequenz_0015.png" id="16_luygg"]
+[ext_resource type="Texture2D" uid="uid://blm8jf8l6rduk" path="res://sprites/game over/Giga_Dog_Bildsequenz_0016.png" id="17_1hgyc"]
+[ext_resource type="Texture2D" uid="uid://bulc51lafn71w" path="res://sprites/game over/Giga_Dog_Bildsequenz_0017.png" id="18_ahpyh"]
+[ext_resource type="Texture2D" uid="uid://brqu5eshalip8" path="res://sprites/game over/Giga_Dog_Bildsequenz_0018.png" id="19_30syl"]
+[ext_resource type="Texture2D" uid="uid://dwrltpg2s12ba" path="res://sprites/game over/Giga_Dog_Bildsequenz_0019.png" id="20_ibf7v"]
+[ext_resource type="Texture2D" uid="uid://dcbbrckulp43e" path="res://sprites/game over/Giga_Dog_Bildsequenz_0020.png" id="21_p1sks"]
+[ext_resource type="Texture2D" uid="uid://bmu0ov4mr5g1t" path="res://sprites/game over/Giga_Dog_Bildsequenz_0021.png" id="22_q46wy"]
+[ext_resource type="Texture2D" uid="uid://ck8rqu5uijpk5" path="res://sprites/game over/Giga_Dog_Bildsequenz_0022.png" id="23_yp3kx"]
+[ext_resource type="AudioStream" uid="uid://bh5ah28gwv1ln" path="res://prefaps/Environment/unbenannt213.mp3" id="26_b4a52"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_njk2c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_025ou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b4a52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_l27ui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_en3v4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0l8sd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_d8l0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6vrmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xyi6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tlkcd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2mq8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mmot0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_feukn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0o4ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_s0r8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_luygg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1hgyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ahpyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_30syl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ibf7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_p1sks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_q46wy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_yp3kx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_njk2c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(578, 325)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_njk2c")
+autoplay = "default"
+frame = 15
+frame_progress = 0.77142984
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." node_paths=PackedStringArray("restartButton")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -193.0
+offset_top = 48.320007
+offset_right = 193.00012
+offset_bottom = 92.32001
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_lu5ed")
+restartButton = NodePath("PlayBtn")
+
+[node name="PlayBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_w2eyy")
+theme_override_font_sizes/font_size = 36
+text = "Restart"
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="AudioListener2D"]
+stream = ExtResource("26_b4a52")
+autoplay = true

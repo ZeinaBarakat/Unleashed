@@ -1,0 +1,189 @@
+[gd_scene load_steps=19 format=3 uid="uid://bj6jfd0andqtq"]
+
+[ext_resource type="PackedScene" uid="uid://bb2o26l1l4w2q" path="res://prefaps/Environment/ground.tscn" id="1_6444e"]
+[ext_resource type="Script" uid="uid://cgla8wyhk7pxa" path="res://scripts/Level.cs" id="1_chwpn"]
+[ext_resource type="PackedScene" uid="uid://bel8afngnkqce" path="res://Scenes/Game/level_2.tscn" id="2_af3po"]
+[ext_resource type="PackedScene" uid="uid://bgamxqhb7r064" path="res://prefaps/Environment/wall.tscn" id="2_evi0p"]
+[ext_resource type="PackedScene" uid="uid://ci7fshhkrx1nm" path="res://prefaps/parallax.tscn" id="3_jrt7v"]
+[ext_resource type="PackedScene" uid="uid://bvyyl8yb5jtr1" path="res://prefaps/killzone.tscn" id="3_lsmp6"]
+[ext_resource type="PackedScene" uid="uid://b1rmh6u2hp7vs" path="res://prefaps/Obstacles/Spikes.tscn" id="4_xrdnt"]
+[ext_resource type="PackedScene" uid="uid://c3qsyijloafto" path="res://Scenes/player.tscn" id="5_wrinw"]
+[ext_resource type="PackedScene" uid="uid://xmtsr7yc44qv" path="res://prefaps/Obstacles/smallDawg.tscn" id="6_xrdnt"]
+[ext_resource type="PackedScene" uid="uid://dr7d67r6drwlw" path="res://prefaps/Environment/rotating_platform.tscn" id="7_wrinw"]
+[ext_resource type="PackedScene" path="res://Scenes/Rope.tscn" id="8_chwpn"]
+[ext_resource type="PackedScene" uid="uid://drlgg3665bbnj" path="res://prefaps/Obstacles/launch_pad.tscn" id="11_uy8f0"]
+[ext_resource type="PackedScene" uid="uid://b4lre3g0kau28" path="res://prefaps/Environment/one_way_platform.tscn" id="12_6r07y"]
+[ext_resource type="PackedScene" uid="uid://6s6i2v1opt3t" path="res://prefaps/ende.tscn" id="13_6r07y"]
+[ext_resource type="PackedScene" uid="uid://b6xl0hqpubwyv" path="res://prefaps/Obstacles/spike_ball.tscn" id="14_6ioyp"]
+[ext_resource type="PackedScene" uid="uid://ct0sgdjx0nm1g" path="res://prefaps/game_jame_vorderschatten.tscn" id="16_3tl1r"]
+[ext_resource type="PackedScene" uid="uid://dg7jowgqe70yf" path="res://prefaps/game_jam_hinterschatten_1.tscn" id="17_58wjw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_chwpn"]
+
+[node name="Level1Tutorial" type="Node2D"]
+script = ExtResource("1_chwpn")
+nextLevel = ExtResource("2_af3po")
+
+[node name="Parallax" parent="." instance=ExtResource("3_jrt7v")]
+
+[node name="Ground" parent="." instance=ExtResource("1_6444e")]
+position = Vector2(-6602, 485)
+
+[node name="Ground2" parent="." instance=ExtResource("1_6444e")]
+position = Vector2(-5266, 485)
+
+[node name="Wall" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-7284, -47)
+
+[node name="Wall2" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-6782, -426)
+rotation = 1.5707964
+
+[node name="Wall3" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-5902, -426)
+rotation = 1.5707964
+
+[node name="Wall4" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-5022, -426)
+rotation = 1.5707964
+
+[node name="Wall5" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-4140, -426)
+rotation = 1.5707964
+
+[node name="Wall6" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-3258, -426)
+rotation = 1.5707964
+
+[node name="Wall14" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-5059, -1864)
+rotation = 1.5707964
+
+[node name="Wall20" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-4179, -1864)
+rotation = 1.5707964
+
+[node name="Wall21" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-3297, -1864)
+rotation = 1.5707964
+
+[node name="Wall22" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-2415, -1864)
+rotation = 1.5707964
+
+[node name="WorldBorder" parent="." instance=ExtResource("3_lsmp6")]
+position = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorder"]
+shape = SubResource("WorldBoundaryShape2D_chwpn")
+
+[node name="Spikes" parent="." instance=ExtResource("4_xrdnt")]
+position = Vector2(-4093, 553)
+
+[node name="player" parent="." instance=ExtResource("5_wrinw")]
+position = Vector2(-7087, 255)
+
+[node name="DawgEnemy" parent="." instance=ExtResource("6_xrdnt")]
+position = Vector2(-6060, 298)
+lowerLimitX = -450.0
+upperLimitX = 550.0
+
+[node name="DawgEnemy2" parent="." instance=ExtResource("6_xrdnt")]
+position = Vector2(-3857, -882)
+lowerLimitX = -450.0
+upperLimitX = 950.0
+
+[node name="RotatingPlatform" parent="." instance=ExtResource("7_wrinw")]
+position = Vector2(-4207, 235)
+scale = Vector2(0.5, 0.5)
+
+[node name="Spikes2" parent="." instance=ExtResource("4_xrdnt")]
+position = Vector2(-3056, 553)
+
+[node name="RotatingPlatform2" parent="." instance=ExtResource("7_wrinw")]
+position = Vector2(-3542, 284)
+scale = Vector2(0.5, 0.5)
+
+[node name="Rope" parent="." instance=ExtResource("8_chwpn")]
+position = Vector2(-2961, -239.00002)
+scale = Vector2(1, 2.5)
+
+[node name="Ground3" parent="." instance=ExtResource("1_6444e")]
+position = Vector2(-2213, 478)
+scale = Vector2(0.5, 1)
+
+[node name="Wall7" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-1911, 217)
+
+[node name="Wall8" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-1911, -664)
+
+[node name="Wall9" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-2757, -804)
+
+[node name="Wall10" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-1911, -1521)
+scale = Vector2(1, 0.95)
+
+[node name="Ground4" parent="." instance=ExtResource("1_6444e")]
+position = Vector2(-4780, -659)
+
+[node name="Ground5" parent="." instance=ExtResource("1_6444e")]
+position = Vector2(-3441, -659)
+
+[node name="LaunchPad" parent="." instance=ExtResource("11_uy8f0")]
+position = Vector2(-2274, -41)
+
+[node name="LaunchPad3" parent="." instance=ExtResource("11_uy8f0")]
+position = Vector2(-2312, -861)
+
+[node name="OneWayPlatform" parent="." instance=ExtResource("12_6r07y")]
+position = Vector2(-2552, -447)
+
+[node name="OneWayPlatform2" parent="." instance=ExtResource("12_6r07y")]
+position = Vector2(-2304, -447)
+
+[node name="OneWayPlatform3" parent="." instance=ExtResource("12_6r07y")]
+position = Vector2(-2050, -447)
+
+[node name="Ende" parent="." instance=ExtResource("13_6r07y")]
+position = Vector2(-5168, -940)
+
+[node name="Wall12" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-5442, -924)
+
+[node name="Wall13" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-5442, -1583)
+scale = Vector2(1, 0.5)
+
+[node name="Wall15" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-131680, -11230)
+scale = Vector2(361, 16)
+
+[node name="Wall16" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-131680, -11230)
+scale = Vector2(361, 16)
+
+[node name="Wall17" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-131680, -11230)
+scale = Vector2(361, 16)
+
+[node name="Wall18" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-2508504, -47166)
+scale = Vector2(6859, 64)
+
+[node name="Wall19" parent="." instance=ExtResource("2_evi0p")]
+position = Vector2(-2508504, -47166)
+scale = Vector2(6859, 64)
+
+[node name="SpikeBall" parent="." instance=ExtResource("14_6ioyp")]
+position = Vector2(-4453, -934)
+
+[node name="GameJameVorderschatten" parent="." instance=ExtResource("16_3tl1r")]
+position = Vector2(-7632, -38)
+
+[node name="GameJamHinterschatten1" parent="." instance=ExtResource("17_58wjw")]
+position = Vector2(-4075, -429)
+
+[node name="GameJameVorderschatten2" parent="." instance=ExtResource("16_3tl1r")]
+position = Vector2(-2976, -274)

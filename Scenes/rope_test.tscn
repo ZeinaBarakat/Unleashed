@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj4ahrpvhlk44"]
+
+[ext_resource type="PackedScene" uid="uid://dj6se2rlrwjdt" path="res://Scenes/Rope.tscn" id="3_6b7gf"]
+
+[node name="RopeTest" type="Node2D"]
+
+[node name="Rope2" parent="." instance=ExtResource("3_6b7gf")]
+position = Vector2(974, 313)
+scale = Vector2(1, 1.985)
+
+[node name="Rope" parent="." instance=ExtResource("3_6b7gf")]
+position = Vector2(53, 111)
+scale = Vector2(1, 2.72)
+
+[node name="Rope3" parent="." instance=ExtResource("3_6b7gf")]
+position = Vector2(106, 222)

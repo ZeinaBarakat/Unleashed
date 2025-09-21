@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddi05cl30i33p"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ws3fs"]
+load_path = "res://.godot/imported/Game_Over_Screen.png-076b4a147efd6e1eeff1d6755ef248fd.ctex"
+
+[node name="Node2D" type="Node2D"]
+
+[node name="GameOverScreen" type="Sprite2D" parent="."]
+position = Vector2(1792, 1109)
+texture = SubResource("CompressedTexture2D_ws3fs")

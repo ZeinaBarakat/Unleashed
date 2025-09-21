@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://6s6i2v1opt3t"]
+
+[ext_resource type="Script" uid="uid://bkymui13qif68" path="res://scripts/WinCondition.cs" id="1_r8hti"]
+[ext_resource type="Texture2D" uid="uid://c8rkf0wo8x7k6" path="res://sprites/Game_Jam_Zieltor.png" id="1_tsbl3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8hti"]
+size = Vector2(239, 289)
+
+[node name="Ende" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_r8hti")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 7
+z_as_relative = false
+texture = ExtResource("1_tsbl3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, -2.5)
+shape = SubResource("RectangleShape2D_r8hti")

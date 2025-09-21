@@ -1,0 +1,308 @@
+[gd_scene load_steps=22 format=3 uid="uid://bel8afngnkqce"]
+
+[ext_resource type="Script" uid="uid://cgla8wyhk7pxa" path="res://scripts/Level.cs" id="1_2mgoq"]
+[ext_resource type="PackedScene" uid="uid://b1rmh6u2hp7vs" path="res://prefaps/Obstacles/Spikes.tscn" id="1_smnlx"]
+[ext_resource type="PackedScene" uid="uid://bb2o26l1l4w2q" path="res://prefaps/Environment/ground.tscn" id="1_v3rpw"]
+[ext_resource type="PackedScene" uid="uid://cwpp0m4jd0h0k" path="res://Scenes/Game/EndWindScene.tscn" id="2_su7r2"]
+[ext_resource type="PackedScene" uid="uid://bvyyl8yb5jtr1" path="res://prefaps/killzone.tscn" id="3_uhnj4"]
+[ext_resource type="PackedScene" uid="uid://bgamxqhb7r064" path="res://prefaps/Environment/wall.tscn" id="3_v36qu"]
+[ext_resource type="PackedScene" path="res://Scenes/Rope.tscn" id="4_cggpd"]
+[ext_resource type="PackedScene" uid="uid://c3qsyijloafto" path="res://Scenes/player.tscn" id="5_055b2"]
+[ext_resource type="PackedScene" uid="uid://xmtsr7yc44qv" path="res://prefaps/Obstacles/smallDawg.tscn" id="6_cggpd"]
+[ext_resource type="PackedScene" uid="uid://3lh33ivk664h" path="res://prefaps/Obstacles/spikes_angled.tscn" id="6_uhnj4"]
+[ext_resource type="PackedScene" uid="uid://b4lre3g0kau28" path="res://prefaps/Environment/one_way_platform.tscn" id="8_t7v2y"]
+[ext_resource type="PackedScene" uid="uid://dr7d67r6drwlw" path="res://prefaps/Environment/rotating_platform.tscn" id="9_ait6c"]
+[ext_resource type="PackedScene" uid="uid://drlgg3665bbnj" path="res://prefaps/Obstacles/launch_pad.tscn" id="10_42uki"]
+[ext_resource type="PackedScene" uid="uid://b6xl0hqpubwyv" path="res://prefaps/Obstacles/spike_ball.tscn" id="13_vcilj"]
+[ext_resource type="PackedScene" uid="uid://6s6i2v1opt3t" path="res://prefaps/ende.tscn" id="14_8cbr8"]
+[ext_resource type="PackedScene" uid="uid://ct0sgdjx0nm1g" path="res://prefaps/game_jame_vorderschatten.tscn" id="15_uilmv"]
+[ext_resource type="PackedScene" uid="uid://dg7jowgqe70yf" path="res://prefaps/game_jam_hinterschatten_1.tscn" id="16_jxkd1"]
+[ext_resource type="PackedScene" uid="uid://ci7fshhkrx1nm" path="res://prefaps/parallax.tscn" id="17_6gxmv"]
+[ext_resource type="PackedScene" uid="uid://dcrkjye8860x7" path="res://Scenes/dawgEnemy.tscn" id="18_6gxmv"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_42uki"]
+
+[sub_resource type="Curve2D" id="Curve2D_6gxmv"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 58232.285, -2243, 0, 0, 0, 0, 58666.047, -2206, 0, 0, 0, 0, 62596.996, -2327, 0, 0, 0, 0, 73441, -2016, 0, 0, 0, 0, 81221.57, -2165, 0, 0, 0, 0, 89544.336, -1851, 0, 0, 0, 0, 101635.4, -2140, 0, 0, 0, 0, 154987.89, -2128, 0, 0, 0, 0, 152764.86, -1653, 0, 0, 0, 0, 146936.22, -1708, 0, 0, 0, 0, 139155.64, -1152, 0, 0, 0, 0, 130209.34, -1212, 0, 0, 0, 0, 123377.625, -551, 0, 0, 0, 0, 119636.44, -708, 0, 0, 0, 0, 111449.22, -24, 0, 0, 0, 0, 105241.03, -193, 0, 0, 0, 0, 102936.68, 224, 0, 0, 0, 0, 49990.844, 253, 0, 0, 0, 0, 8431.211, 249, 0, 0, 0, 0, -1301.2802, 65, 0, 0, 0, 0, -80950.47, 58)
+}
+point_count = 21
+
+[node name="Level2" type="Node2D"]
+script = ExtResource("1_2mgoq")
+nextLevel = ExtResource("2_su7r2")
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="Spikes3" parent="Environment" instance=ExtResource("1_smnlx")]
+position = Vector2(-1566, 541)
+
+[node name="Spikes" parent="Environment" instance=ExtResource("1_smnlx")]
+position = Vector2(-509, 540)
+
+[node name="Ground" parent="Environment" instance=ExtResource("1_v3rpw")]
+position = Vector2(720, 472)
+
+[node name="Ground7" parent="Environment" instance=ExtResource("1_v3rpw")]
+position = Vector2(2053, 472)
+
+[node name="Ground8" parent="Environment" instance=ExtResource("1_v3rpw")]
+position = Vector2(3389, 472)
+
+[node name="Ground9" parent="Environment" instance=ExtResource("1_v3rpw")]
+position = Vector2(4725, 472)
+
+[node name="Ground3" parent="Environment" instance=ExtResource("1_v3rpw")]
+position = Vector2(-4076, 480)
+
+[node name="Ground2" parent="Environment" instance=ExtResource("1_v3rpw")]
+position = Vector2(-2736, 480)
+
+[node name="Wall3" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(881, -520)
+rotation = 1.5707964
+
+[node name="Wall5" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-873, -520)
+rotation = 1.5707964
+
+[node name="Wall2" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(3, -520)
+rotation = 1.5707964
+
+[node name="Wall4" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-1751, -520)
+rotation = 1.5707964
+
+[node name="Wall6" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-2630, -520)
+rotation = 1.5707964
+
+[node name="Wall7" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-3509, -520)
+rotation = 1.5707964
+
+[node name="Rope" parent="Environment" instance=ExtResource("4_cggpd")]
+position = Vector2(-428, -259)
+scale = Vector2(1, 4)
+
+[node name="Rope2" parent="Environment" instance=ExtResource("4_cggpd")]
+position = Vector2(-803, -311)
+scale = Vector2(1, 3)
+
+[node name="Rope3" parent="Environment" instance=ExtResource("4_cggpd")]
+position = Vector2(-1186, -258)
+scale = Vector2(1, 4)
+
+[node name="Rope4" parent="Environment" instance=ExtResource("4_cggpd")]
+position = Vector2(-1565, -362)
+scale = Vector2(1.5, 3)
+
+[node name="Wall8" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-4215.0005, -813.0001)
+rotation = -0.7853982
+
+[node name="Wall9" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-4837.0005, -1435.0001)
+rotation = -0.7853982
+
+[node name="Spikes Angled" parent="Environment" instance=ExtResource("6_uhnj4")]
+position = Vector2(-4906, -20)
+rotation = 1.5707964
+
+[node name="Spikes Angled2" parent="Environment" instance=ExtResource("6_uhnj4")]
+position = Vector2(-5979, -1088)
+rotation = 1.5707964
+
+[node name="Spikes Angled3" parent="Environment" instance=ExtResource("6_uhnj4")]
+position = Vector2(-5460, -574)
+rotation = 1.5707964
+
+[node name="LaunchPad" parent="Environment" instance=ExtResource("10_42uki")]
+position = Vector2(-4157, 62)
+
+[node name="LaunchPad2" parent="Environment" instance=ExtResource("10_42uki")]
+position = Vector2(-4603, -459)
+
+[node name="LaunchPad3" parent="Environment" instance=ExtResource("10_42uki")]
+position = Vector2(-5151, -1042)
+
+[node name="Wall10" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-5870, -2365)
+rotation = 1.5707964
+
+[node name="Wall11" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-6249, -1863)
+
+[node name="LaunchPad4" parent="Environment" instance=ExtResource("10_42uki")]
+position = Vector2(-5645, -1509)
+
+[node name="OneWayPlatform" parent="Environment" instance=ExtResource("8_t7v2y")]
+position = Vector2(-5916, -1985)
+scale = Vector2(2, 1)
+
+[node name="OneWayPlatform2" parent="Environment" instance=ExtResource("8_t7v2y")]
+position = Vector2(-5415, -1985)
+scale = Vector2(2, 1)
+
+[node name="Ground4" parent="Environment" instance=ExtResource("1_v3rpw")]
+position = Vector2(-4472, -1876)
+
+[node name="Wall12" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-4990, -2365)
+rotation = 1.5707964
+
+[node name="Wall13" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-4109, -2365)
+rotation = 1.5707964
+
+[node name="Wall14" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-3230, -2365)
+rotation = 1.5707964
+
+[node name="Wall15" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-3787, -1564)
+rotation = -6.2831855
+
+[node name="RotatingPlatform" parent="Environment" instance=ExtResource("9_ait6c")]
+position = Vector2(-3399, -1670)
+scale = Vector2(0.5, 1)
+
+[node name="Spikes2" parent="Environment" instance=ExtResource("1_smnlx")]
+position = Vector2(-3175, -1230)
+
+[node name="RotatingPlatform2" parent="Environment" instance=ExtResource("9_ait6c")]
+position = Vector2(-2838, -1818)
+scale = Vector2(0.5, 1)
+
+[node name="Spikes4" parent="Environment" instance=ExtResource("1_smnlx")]
+position = Vector2(-2209, -1230)
+
+[node name="Wall16" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-1731, -1615)
+rotation = -6.2831855
+
+[node name="Wall17" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-1731, -2495)
+rotation = -6.2831855
+
+[node name="Wall18" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-2728, -2743)
+rotation = -6.2831855
+
+[node name="RotatingPlatform3" parent="Environment" instance=ExtResource("9_ait6c")]
+position = Vector2(-2266, -2012)
+scale = Vector2(0.5, 1)
+
+[node name="Wall19" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-1731, -3374)
+rotation = -6.2831855
+
+[node name="Wall20" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-2232, -3755)
+rotation = 1.5707964
+
+[node name="Rope5" parent="Environment" instance=ExtResource("4_cggpd")]
+position = Vector2(-2302, -3445)
+scale = Vector2(1, 5)
+
+[node name="Wall21" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-3114, -3755)
+rotation = 1.5707964
+
+[node name="Ground5" parent="Environment" instance=ExtResource("1_v3rpw")]
+position = Vector2(-3412, -2599)
+
+[node name="Wall22" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-3996, -3755)
+rotation = 1.5707964
+
+[node name="Wall23" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-4878, -3755)
+rotation = 1.5707964
+
+[node name="Wall25" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-5436, -2867)
+rotation = -6.2831855
+
+[node name="Wall26" parent="Environment" instance=ExtResource("3_v36qu")]
+position = Vector2(-5436, -3378)
+rotation = -6.2831855
+
+[node name="Ground6" parent="Environment" instance=ExtResource("1_v3rpw")]
+position = Vector2(-4752, -2599)
+
+[node name="SpikeBall" parent="Environment" instance=ExtResource("13_vcilj")]
+position = Vector2(-3109, -2988)
+
+[node name="SpikeBall2" parent="Environment" instance=ExtResource("13_vcilj")]
+position = Vector2(-3713, -3141)
+
+[node name="SpikeBall3" parent="Environment" instance=ExtResource("13_vcilj")]
+position = Vector2(-4443, -2974)
+
+[node name="LaunchPad5" parent="Environment" instance=ExtResource("10_42uki")]
+position = Vector2(-4114, -2915)
+
+[node name="Ende" parent="Environment" instance=ExtResource("14_8cbr8")]
+position = Vector2(-4774, -3435)
+
+[node name="OneWayPlatform3" parent="Environment" instance=ExtResource("8_t7v2y")]
+position = Vector2(-4788, -3261)
+scale = Vector2(2, 1)
+
+[node name="player" parent="." instance=ExtResource("5_055b2")]
+position = Vector2(759, 232)
+JumpVelocity = -900.0
+
+[node name="WorldBorder" parent="." instance=ExtResource("3_uhnj4")]
+position = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorder"]
+shape = SubResource("WorldBoundaryShape2D_42uki")
+
+[node name="DawgEnemy" parent="." instance=ExtResource("6_cggpd")]
+position = Vector2(-2710, 295)
+lowerLimitX = -660.0
+upperLimitX = 610.0
+
+[node name="DawgEnemy2" parent="." instance=ExtResource("6_cggpd")]
+position = Vector2(-4019, 291)
+lowerLimitX = -400.0
+upperLimitX = 580.0
+
+[node name="DawgEnemy3" parent="." instance=ExtResource("6_cggpd")]
+position = Vector2(-3679, -2803)
+lowerLimitX = -600.0
+upperLimitX = 850.0
+
+[node name="DawgEnemy4" parent="." instance=ExtResource("6_cggpd")]
+position = Vector2(-4719, -2790)
+lowerLimitX = -600.0
+upperLimitX = 750.0
+
+[node name="GameJameVorderschatten" parent="." instance=ExtResource("15_uilmv")]
+position = Vector2(-1467, -261)
+
+[node name="GameJameVorderschatten2" parent="." instance=ExtResource("15_uilmv")]
+position = Vector2(-2685, -2352)
+
+[node name="GameJameVorderschatten3" parent="." instance=ExtResource("15_uilmv")]
+position = Vector2(-5649, -2876)
+
+[node name="GameJamHinterschatten1" parent="." instance=ExtResource("16_jxkd1")]
+position = Vector2(-3735, -869)
+
+[node name="GameJamHinterschatten2" parent="." instance=ExtResource("16_jxkd1")]
+position = Vector2(-2696, -3913)
+
+[node name="Parallax" parent="." instance=ExtResource("17_6gxmv")]
+
+[node name="enemy" parent="." node_paths=PackedStringArray("path", "player") instance=ExtResource("18_6gxmv")]
+position = Vector2(2963, 67)
+path = NodePath("../Path2D")
+player = NodePath("../player")
+
+[node name="Path2D" type="Path2D" parent="."]
+scale = Vector2(-0.036886755, 1)
+curve = SubResource("Curve2D_6gxmv")

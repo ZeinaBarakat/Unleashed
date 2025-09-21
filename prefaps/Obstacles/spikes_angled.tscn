@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://3lh33ivk664h"]
+
+[ext_resource type="Texture2D" uid="uid://bjeie40jpo7nb" path="res://sprites/environment/Game_Jam_Stachel_rampe.png" id="1_b73i4"]
+[ext_resource type="PackedScene" uid="uid://bvyyl8yb5jtr1" path="res://prefaps/killzone.tscn" id="2_bwykl"]
+
+[node name="Spikes Angled" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_b73i4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(324, -462, -335, 208, -335, 465, 334, 463)
+
+[node name="Killzone" parent="." instance=ExtResource("2_bwykl")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Killzone"]
+polygon = PackedVector2Array(223, -352, -278, 145, -309, 48, 110, -385)

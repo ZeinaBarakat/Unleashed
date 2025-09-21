@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbcdicf2l7v8w"]
+
+[ext_resource type="Script" uid="uid://cgla8wyhk7pxa" path="res://Scripts/Level.cs" id="1_iswej"]
+[ext_resource type="PackedScene" uid="uid://vpro46u1ru3w" path="res://Scenes/Game/MainMenu.tscn" id="2_2jxs2"]
+
+[node name="WinScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iswej")
+nextLevel = ExtResource("2_2jxs2")
